@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="UserContext-Web.config Connection String" description="UserContext Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\UserData.mdf';Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\LooseControl\\documents\\visual\ studio\ 2017\\Projects\\Spark\\Spark\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='UserContext']/@connectionString" />
+  </parameter>
+</parameters>

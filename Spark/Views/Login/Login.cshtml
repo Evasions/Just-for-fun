@@ -1,0 +1,66 @@
+﻿@model Spark.Models.LoginModel
+@{
+    Layout = null;
+ }
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Страница входа</title>
+    @Scripts.Render("~/Scripts/bootstrap.min.js")
+    <link rel="stylesheet" href=" ~/Content/style.css")
+   
+</head>
+<body>
+    <div class="wrapper">
+        <div class="entrance-page">
+            <div class="container">
+                <div class="bg-block">
+                    <div class="entrance-page-block">
+                        <div class="logo">
+                            <a href="#">Logo</a>
+                        </div>
+                        <div class="enter-block">
+                            @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "entrance-form" })) {
+                                <div class="entrance-form_login">
+                                    <input type="text" name="Email">
+                                </div>
+                                    <div class="entrance-form_password">
+                                        <input type="password" name="Password">
+                                    </div>
+                                    <input type="submit" value="Войти" class="entrance-form_btn"/>
+                                }
+                        </div>
+                        <div class="adn-link">
+                            <div class="adn-link_rm">
+                                <a href="#">Запомнить меня</a>
+                            </div>
+                            <div class="adn-link_fg">
+                                <a href="#">Забыл пароль?</a>
+                            </div>
+                            <div class="adn-link_rg">
+                               @Html.ActionLink("Регистрация","Register","Login")
+                            </div>
+                        </div>
+                        <div class="adn-soc-enter">
+                            <div class="ad-entrance">
+                                <a href="#">Войти с помощью</a>
+                            </div>
+                            <div class="soc-icon">
+                                <a href="#" class="f"></a>
+                                <a href="#" class="g"></a>
+                                <a href="#" class="tw"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
